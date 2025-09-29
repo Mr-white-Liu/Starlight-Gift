@@ -1,4 +1,4 @@
-import {defineConfig} from 'vite'
+import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
@@ -7,7 +7,8 @@ export default defineConfig({
         port: 3000,
         open: true
     },
-    base: './',
+    // 动态设置 base 路径
+    base: process.env.NODE_ENV === 'production' ? '/<repo-name>/' : '/',
     build: {
         rollupOptions: {
             output: {
