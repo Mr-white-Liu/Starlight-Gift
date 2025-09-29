@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite'
+import {defineConfig} from 'vite'
 import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
@@ -8,7 +8,7 @@ export default defineConfig({
         open: true
     },
     // 动态设置 base 路径
-    base: process.env.NODE_ENV === 'production' ? '/Starlight-Gift/' : '/',
+    base: '/Starlight-Gift/',
     build: {
         rollupOptions: {
             output: {
